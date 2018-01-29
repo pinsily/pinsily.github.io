@@ -190,7 +190,7 @@
 <center><p>你忘了我们的破风格言是什么，风在前，无惧</p></center>
 
 <hr>
-<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>使用 json 的 indent 参数可以控制缩进来达到排版 json<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span>&gt;&gt; data</span><br><span class="line">&#123;'programmers': [&#123;'firstName': 'Brett', 'lastName': 'McLaughlin', 'email': 'aaaa'&#125;, &#123;'firstName': 'Jason', 'lastName': 'Hunter', 'email': 'bbbb'&#125;, &#123;'firstName': 'Elliotte', 'lastName': 'Harold', 'email': 'cccc'&#125;], 'authors': [&#123;'firstName': 'Isaac', 'lastName': 'Asimov', 'genre': 'science fiction'&#125;, &#123;'firstName': 'Tad', 'lastName': 'Williams', 'genre': 'fantasy'&#125;, &#123;'firstName': 'Frank', 'lastName': 'Peretti', 'genre': 'christian fiction'&#125;], 'musicians': [&#123;'firstName': 'Eric', 'lastName': 'Clapton', 'instrument': 'guitar'&#125;, &#123;'firstName': 'Sergei', 'lastName': 'Rachmaninoff', 'instrument': 'piano'&#125;]&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; print(json.dumps(data))</span><br><span class="line">&#123;"programmers": [&#123;"firstName": "Brett", "lastName": "McLaughlin", "email": "aaaa"&#125;, &#123;"firstName": "Jason", "lastName": "Hunter", "email": "bbbb"&#125;, &#123;"firstName": "Elliotte", "lastName": "Harold", "email": "cccc"&#125;], "authors": [&#123;"firstName": "Isaac", "lastName": "Asimov", "genre": "science fiction"&#125;, &#123;"firstName": "Tad", "lastName": "Williams", "genre": "fantasy"&#125;, &#123;"firstName": "Frank", "lastName": "Peretti", "genre": "christian fiction"&#125;], "musicians": [&#123;"firstName": "Eric", "lastName": "Clapton", "instrument": "guitar"&#125;, &#123;"firstName": "Sergei", "lastName": "Rachmaninoff", "instrument": "piano"&#125;]&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; print(json.dumps(data, indent=2))</span><br><span class="line">&#123;</span><br><span class="line">  "programmers": [</span><br><span class="line">    &#123;</span><br><span class="line">      "firstName": "Brett",</span><br><span class="line">      "lastName": "McLaughlin",</span><br><span class="line">      "email": "aaaa"</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      "firstName": "Jason",</span><br><span class="line">      "lastName": "Hunter",</span><br><span class="line">      "email": "bbbb"</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      "firstName": "Elliotte",</span><br><span class="line">      "lastName": "Harold",</span><br><span class="line">      "email": "cccc"</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  "authors": [</span><br><span class="line">    &#123;</span><br><span class="line">      "firstName": "Isaac",</span><br><span class="line">      "lastName": "Asimov",</span><br><span class="line">      "genre": "science fiction"</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      "firstName": "Tad",</span><br><span class="line">      "lastName": "Williams",</span><br><span class="line">      "genre": "fantasy"</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      "firstName": "Frank",</span><br><span class="line">      "lastName": "Peretti",</span><br><span class="line">      "genre": "christian fiction"</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  "musicians": [</span><br><span class="line">    &#123;</span><br><span class="line">      "firstName": "Eric",</span><br><span class="line">      "lastName": "Clapton",</span><br><span class="line">      "instrument": "guitar"</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      "firstName": "Sergei",</span><br><span class="line">      "lastName": "Rachmaninoff",</span><br><span class="line">      "instrument": "piano"</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>使用 json 的 indent 参数可以控制缩进来达到排版 json<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; data</span></span><br><span class="line">&#123;'programmers': [&#123;'firstName': 'Brett', 'lastName': 'McLaughlin', 'email': 'aaaa'&#125;, &#123;'firstName': 'Jason', 'lastName': 'Hunter', 'email': 'bbbb'&#125;, &#123;'firstName': 'Elliotte', 'lastName': 'Harold', 'email': 'cccc'&#125;], 'authors': [&#123;'firstName': 'Isaac', 'lastName': 'Asimov', 'genre': 'science fiction'&#125;, &#123;'firstName': 'Tad', 'lastName': 'Williams', 'genre': 'fantasy'&#125;, &#123;'firstName': 'Frank', 'lastName': 'Peretti', 'genre': 'christian fiction'&#125;], 'musicians': [&#123;'firstName': 'Eric', 'lastName': 'Clapton', 'instrument': 'guitar'&#125;, &#123;'firstName': 'Sergei', 'lastName': 'Rachmaninoff', 'instrument': 'piano'&#125;]&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; <span class="built_in">print</span>(json.dumps(data))</span></span><br><span class="line">&#123;"programmers": [&#123;"firstName": "Brett", "lastName": "McLaughlin", "email": "aaaa"&#125;, &#123;"firstName": "Jason", "lastName": "Hunter", "email": "bbbb"&#125;, &#123;"firstName": "Elliotte", "lastName": "Harold", "email": "cccc"&#125;], "authors": [&#123;"firstName": "Isaac", "lastName": "Asimov", "genre": "science fiction"&#125;, &#123;"firstName": "Tad", "lastName": "Williams", "genre": "fantasy"&#125;, &#123;"firstName": "Frank", "lastName": "Peretti", "genre": "christian fiction"&#125;], "musicians": [&#123;"firstName": "Eric", "lastName": "Clapton", "instrument": "guitar"&#125;, &#123;"firstName": "Sergei", "lastName": "Rachmaninoff", "instrument": "piano"&#125;]&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; <span class="built_in">print</span>(json.dumps(data, indent=2))</span></span><br><span class="line">&#123;</span><br><span class="line">  "programmers": [</span><br><span class="line">    &#123;</span><br><span class="line">      "firstName": "Brett",</span><br><span class="line">      "lastName": "McLaughlin",</span><br><span class="line">      "email": "aaaa"</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      "firstName": "Jason",</span><br><span class="line">      "lastName": "Hunter",</span><br><span class="line">      "email": "bbbb"</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      "firstName": "Elliotte",</span><br><span class="line">      "lastName": "Harold",</span><br><span class="line">      "email": "cccc"</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  "authors": [</span><br><span class="line">    &#123;</span><br><span class="line">      "firstName": "Isaac",</span><br><span class="line">      "lastName": "Asimov",</span><br><span class="line">      "genre": "science fiction"</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      "firstName": "Tad",</span><br><span class="line">      "lastName": "Williams",</span><br><span class="line">      "genre": "fantasy"</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      "firstName": "Frank",</span><br><span class="line">      "lastName": "Peretti",</span><br><span class="line">      "genre": "christian fiction"</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  "musicians": [</span><br><span class="line">    &#123;</span><br><span class="line">      "firstName": "Eric",</span><br><span class="line">      "lastName": "Clapton",</span><br><span class="line">      "instrument": "guitar"</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      "firstName": "Sergei",</span><br><span class="line">      "lastName": "Rachmaninoff",</span><br><span class="line">      "instrument": "piano"</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <hr>
 
       
@@ -446,19 +446,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">hello</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">AI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Apriori</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -466,15 +454,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Apriori</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
+                <a href="javascript:void(0)" class="js-tag color3">android</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">android</a>
+                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -487,6 +483,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">hello</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -518,10 +518,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">心理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">日志</a>
               </li>
              
@@ -535,6 +531,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">树莓派(3)</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">心理</a>
               </li>
             
             <div class="clearfix"></div>

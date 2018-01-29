@@ -193,8 +193,8 @@
 
 <hr>
 <p>今天遇到一个新的函数 enumerate(), 可以从一个可迭代对象(dict,list,string 等)同时得到索引和值，这样就避免了另外生成变量来操作了</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span>&gt;&gt; l = ["hello","this","is","my","name"]</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; for index,value in enumerate(l):</span><br><span class="line">...     print(index,value)</span><br><span class="line">...</span><br><span class="line">0 hello</span><br><span class="line">1 this</span><br><span class="line">2 is</span><br><span class="line">3 my</span><br><span class="line">4 name</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; s = "hello"</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; for index, value in enumerate(s):</span><br><span class="line">...     print(index,value)</span><br><span class="line">...</span><br><span class="line">0 h</span><br><span class="line">1 e</span><br><span class="line">2 l</span><br><span class="line">3 l</span><br><span class="line">4 o</span><br></pre></td></tr></table></figure>
-<p>还可以接受第二个参数规定初试索引值<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span>&gt;&gt; for index, value in enumerate(s,1):</span><br><span class="line">...     print(index,value)</span><br><span class="line">...</span><br><span class="line">1 h</span><br><span class="line">2 e</span><br><span class="line">3 l</span><br><span class="line">4 l</span><br><span class="line">5 o</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; l = [<span class="string">"hello"</span>,<span class="string">"this"</span>,<span class="string">"is"</span>,<span class="string">"my"</span>,<span class="string">"name"</span>]</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; <span class="keyword">for</span> index,value <span class="keyword">in</span> enumerate(l):</span></span><br><span class="line">...     print(index,value)</span><br><span class="line">...</span><br><span class="line">0 hello</span><br><span class="line">1 this</span><br><span class="line">2 is</span><br><span class="line">3 my</span><br><span class="line">4 name</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; s = <span class="string">"hello"</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; <span class="keyword">for</span> index, value <span class="keyword">in</span> enumerate(s):</span></span><br><span class="line">...     print(index,value)</span><br><span class="line">...</span><br><span class="line">0 h</span><br><span class="line">1 e</span><br><span class="line">2 l</span><br><span class="line">3 l</span><br><span class="line">4 o</span><br></pre></td></tr></table></figure>
+<p>还可以接受第二个参数规定初试索引值<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; <span class="keyword">for</span> index, value <span class="keyword">in</span> enumerate(s,1):</span></span><br><span class="line">...     print(index,value)</span><br><span class="line">...</span><br><span class="line">1 h</span><br><span class="line">2 e</span><br><span class="line">3 l</span><br><span class="line">4 l</span><br><span class="line">5 o</span><br></pre></td></tr></table></figure></p>
 <hr>
 
       
@@ -450,19 +450,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">hello</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">AI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Apriori</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -470,15 +458,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Apriori</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
+                <a href="javascript:void(0)" class="js-tag color3">android</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">android</a>
+                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -491,6 +487,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">hello</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -522,10 +522,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">心理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">日志</a>
               </li>
              
@@ -539,6 +535,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">树莓派(3)</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">心理</a>
               </li>
             
             <div class="clearfix"></div>

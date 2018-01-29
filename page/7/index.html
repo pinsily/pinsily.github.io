@@ -837,12 +837,12 @@
 <center><p>昔我往矣，杨柳依依。今我来思，雨雪霏霏</p></center>
 
 <hr>
-<h5 id="查看数据库"><a href="#查看数据库" class="headerlink" title="查看数据库"></a><strong>查看数据库</strong></h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span> db;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span> show tables;</span><br><span class="line">cities</span><br><span class="line">orders</span><br><span class="line">schools</span><br><span class="line">wx_behaves</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span> show collections</span><br><span class="line">cities</span><br><span class="line">orders</span><br><span class="line">schools</span><br><span class="line">wx_behaves</span><br></pre></td></tr></table></figure>
-<h5 id="使用数据库"><a href="#使用数据库" class="headerlink" title="使用数据库"></a><strong>使用数据库</strong></h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span> db.orders</span><br><span class="line">youxue.orders</span><br></pre></td></tr></table></figure>
+<h5 id="查看数据库"><a href="#查看数据库" class="headerlink" title="查看数据库"></a><strong>查看数据库</strong></h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> db;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> show tables;</span></span><br><span class="line">cities</span><br><span class="line">orders</span><br><span class="line">schools</span><br><span class="line">wx_behaves</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> show collections</span></span><br><span class="line">cities</span><br><span class="line">orders</span><br><span class="line">schools</span><br><span class="line">wx_behaves</span><br></pre></td></tr></table></figure>
+<h5 id="使用数据库"><a href="#使用数据库" class="headerlink" title="使用数据库"></a><strong>使用数据库</strong></h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> db.orders</span></span><br><span class="line">youxue.orders</span><br></pre></td></tr></table></figure>
 <h5 id="查询"><a href="#查询" class="headerlink" title="查询"></a><strong>查询</strong></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 杂乱无章</span><br><span class="line">&gt; db.orders.find()</span><br><span class="line"></span><br><span class="line"># 排好文档格式</span><br><span class="line">&gt; db.schools.find().pretty()</span><br><span class="line"></span><br><span class="line"># </span><br><span class="line">&gt; db.col.find(&#123;&quot;title&quot;: &apos;MongoDB 教程&apos;&#125;).pretty()</span><br></pre></td></tr></table></figure>
-<h5 id="插入"><a href="#插入" class="headerlink" title="插入"></a><strong>插入</strong></h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span> document=( &#123;title: 'MongoDB 教程', </span><br><span class="line">    description: 'MongoDB 是一个 Nosql 数据库',</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">        "title" : "MongoDB 教程",</span><br><span class="line">        "description" : "MongoDB 是一个 Nosql 数据库",</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span> db.orders.insert(document)</span><br><span class="line">WriteResult(&#123; "nInserted" : 1 &#125;)</span><br></pre></td></tr></table></figure>
-<h5 id="更新"><a href="#更新" class="headerlink" title="更新"></a><strong>更新</strong></h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 找到对应文档，修改属性</span><br><span class="line"><span class="meta">&gt;</span> db.orders.update(&#123;'title':'MongoDB 教程'&#125;,&#123;$set:&#123;'title':'MongoDB'&#125;&#125;)</span><br></pre></td></tr></table></figure>
-<h5 id="删除"><a href="#删除" class="headerlink" title="删除"></a><strong>删除</strong></h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 删除此标题的文档</span><br><span class="line"><span class="meta">&gt;</span> db.orders.remove(&#123;'title':'MongoDB 教程'&#125;)</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 删除全部数据</span><br><span class="line"><span class="meta">&gt;</span> db.orders.remove(&#123;&#125;)</span><br></pre></td></tr></table></figure>
+<h5 id="插入"><a href="#插入" class="headerlink" title="插入"></a><strong>插入</strong></h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> document=( &#123;title: <span class="string">'MongoDB 教程'</span>, </span></span><br><span class="line">    description: 'MongoDB 是一个 Nosql 数据库',</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">        "title" : "MongoDB 教程",</span><br><span class="line">        "description" : "MongoDB 是一个 Nosql 数据库",</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> db.orders.insert(document)</span></span><br><span class="line">WriteResult(&#123; "nInserted" : 1 &#125;)</span><br></pre></td></tr></table></figure>
+<h5 id="更新"><a href="#更新" class="headerlink" title="更新"></a><strong>更新</strong></h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 找到对应文档，修改属性</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> db.orders.update(&#123;<span class="string">'title'</span>:<span class="string">'MongoDB 教程'</span>&#125;,&#123;<span class="variable">$set</span>:&#123;<span class="string">'title'</span>:<span class="string">'MongoDB'</span>&#125;&#125;)</span></span><br></pre></td></tr></table></figure>
+<h5 id="删除"><a href="#删除" class="headerlink" title="删除"></a><strong>删除</strong></h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 删除此标题的文档</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> db.orders.remove(&#123;<span class="string">'title'</span>:<span class="string">'MongoDB 教程'</span>&#125;)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 删除全部数据</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> db.orders.remove(&#123;&#125;)</span></span><br></pre></td></tr></table></figure>
 <hr>
 
       
@@ -994,19 +994,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">hello</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">AI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Apriori</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1014,15 +1002,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Apriori</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
+                <a href="javascript:void(0)" class="js-tag color3">android</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">android</a>
+                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1035,6 +1031,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">hello</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1066,10 +1066,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">心理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">日志</a>
               </li>
              
@@ -1083,6 +1079,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">树莓派(3)</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">心理</a>
               </li>
             
             <div class="clearfix"></div>
