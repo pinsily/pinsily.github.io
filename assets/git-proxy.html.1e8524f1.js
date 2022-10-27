@@ -1,0 +1,1 @@
+import{_ as t}from"./_plugin-vue_export-helper.cdc0426e.js";import{o,c as r,a as e,b as a}from"./app.78d3af80.js";const c={},s=e("h4",{id:"這樣",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#這樣","aria-hidden":"true"},"#"),a(" 這樣")],-1),n=[s];function _(i,d){return o(),r("div",null,n)}const f=t(c,[["render",_],["__file","git-proxy.html.vue"]]);export{f as default};
